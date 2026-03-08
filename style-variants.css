@@ -1,0 +1,311 @@
+/*
+  ALTERNA MEDIOS - ESTILOS ADICIONALES
+
+  Este archivo contiene variantes de color y temas adicionales
+  que puedes usar según necesites.
+
+  Para usar: importa este archivo DESPUÉS de style.css
+  <link rel="stylesheet" href="style-variants.css">
+*/
+
+/* ===== TEMA OSCURO (DEFAULT) ===== */
+:root {
+  /* Ya definido en style.css */
+}
+
+/* ===== TEMA CLARO (ALTERNATIVO) ===== */
+body.theme-light {
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text: rgba(10, 10, 10, 0.95);
+  --text-muted: rgba(10, 10, 10, 0.65);
+  --border: rgba(0, 0, 0, 0.08);
+  --accent-primary: #d20000;
+  --accent-secondary: #ff3b30;
+}
+
+/* ===== TEMA ALTERNATIVO - AZUL ===== */
+body.theme-blue {
+  --bg: #0a1428;
+  --bg-secondary: #161d2f;
+  --text: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.08);
+  --accent-primary: #0d6efd;
+  --accent-secondary: #0d6efd;
+}
+
+/* ===== TEMA ALTERNATIVO - PÚRPURA ===== */
+body.theme-purple {
+  --bg: #1a0a2e;
+  --bg-secondary: #26102f;
+  --text: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.08);
+  --accent-primary: #a855f7;
+  --accent-secondary: #d946ef;
+}
+
+/* ===== TEMA ALTERNATIVO - VERDE ===== */
+body.theme-green {
+  --bg: #0a2e1a;
+  --bg-secondary: #1a3a2b;
+  --text: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.08);
+  --accent-primary: #10b981;
+  --accent-secondary: #34d399;
+}
+
+/* ===== TEMA ALTERNATIVO - NARANJA ===== */
+body.theme-orange {
+  --bg: #2a1810;
+  --bg-secondary: #3d2415;
+  --text: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.08);
+  --accent-primary: #f97316;
+  --accent-secondary: #fb923c;
+}
+
+/* ===== ESTILOS PARA ANIMACIONES ADICIONALES ===== */
+
+/* Animación pulse para badges */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Animación glow para elementos destacados */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(210, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(210, 0, 0, 0.6);
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Animación shimmer para loading */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ===== VARIANTES DE CARDS ===== */
+
+/* Card con borde destacado */
+.card-bordered {
+  border: 2px solid var(--accent-primary);
+}
+
+.card-bordered:hover {
+  box-shadow: 0 0 20px rgba(210, 0, 0, 0.3);
+}
+
+/* Card con fondo gradient */
+.card-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(210, 0, 0, 0.1) 0%,
+    rgba(255, 59, 48, 0.05) 100%
+  );
+}
+
+/* Card minimalista */
+.card-minimal {
+  border: none;
+  background: transparent;
+}
+
+.card-minimal:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ===== VARIANTES DE BOTONES ===== */
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(210, 0, 0, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* ===== UTILIDADES ===== */
+
+/* Text utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
+
+/* Spacing utilities */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+/* Display utilities */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* ===== RESPONSIVE UTILITIES ===== */
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none;
+  }
+
+  .show-desktop {
+    display: block;
+  }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+
+/* Focus visible para navegación por teclado */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.platform-card:focus-visible {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: more) {
+  :root {
+    --border: rgba(255, 255, 255, 0.2);
+    --text-muted: rgba(255, 255, 255, 0.8);
+  }
+}
+

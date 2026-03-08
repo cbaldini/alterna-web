@@ -1,0 +1,45 @@
+{
+  "name": "alterna-medios",
+  "version": "1.0.0",
+  "description": "Portal multimedia para Alterna Radio y Alterna TV",
+  "main": "index.html",
+  "author": "Alterna Medios",
+  "license": "All rights reserved",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alterna/alterna-medios"
+  },
+  "keywords": [
+    "alterna",
+    "radio",
+    "tv",
+    "multimedia",
+    "argentina"
+  ],
+  "scripts": {
+    "serve": "python3 -m http.server 8000 || python -m SimpleHTTPServer 8000",
+    "dev": "http-server -p 8080 -c-1",
+    "build:css": "cssnano style.css -o style.min.css",
+    "build:js": "terser app.js -c -m -o app.min.js",
+    "minify": "npm run build:css && npm run build:js",
+    "validate:html": "html-validate index.html",
+    "validate:css": "stylelint style.css",
+    "test": "npm run validate:html && npm run validate:css"
+  },
+  "devDependencies": {
+    "cssnano-cli": "^3.0.0",
+    "html-validate": "^8.0.0",
+    "stylelint": "^15.0.0",
+    "terser": "^5.20.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+

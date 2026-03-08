@@ -1,0 +1,33 @@
+# Robots.txt - Alterna Medios
+# https://www.robotstxt.org/
+
+# Permitir a todos los bots
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Otros bots
+User-agent: *
+Crawl-delay: 1
+Request-rate: 1/10s
+
+# Sitemap
+Sitemap: https://alterna.ar/sitemap.xml
+
+# Información de contacto
+# Para reportar abusos, contacta a: contacto@alterna.ar
+
