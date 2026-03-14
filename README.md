@@ -1,4 +1,4 @@
-# Alterna Medios - Portal Multimedia
+# Alternamedia - Portal Multimedia
 
 Un sitio web profesional, moderno y responsivo que funciona como portal central para **Alterna Radio** y **Alterna TV**.
 
