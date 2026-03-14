@@ -69,7 +69,7 @@ Seguridad:
 
 📐 ARQUITECTURA DE CARPETAS
 
-alterna-medios/
+alternamedia/
 ├── index.html                 # Página principal
 ├── style.css                  # Estilos principales
 ├── style-variants.css         # Temas alternativos
@@ -317,7 +317,7 @@ GitHub Pages:
   • HTTPS: Gratis
 
 AWS S3 + CloudFront:
-  • S3 bucket: alterna-medios
+  • S3 bucket: alternamedia
   • CloudFront: CDN global
   • Route 53: DNS
   • ACM: SSL certificate

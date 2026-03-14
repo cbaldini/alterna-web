@@ -1,12 +1,12 @@
 /**
- * CONFIG.JS - Configuración de Alterna Medios
+ * CONFIG.JS - Configuración de Alternamedia
  * Usa este archivo para personalizar fácilmente el sitio
  */
 
 const ALTERNA_CONFIG = {
   // Información del sitio
   site: {
-    title: 'Alterna Medios',
+    title: 'Alternamedia',
     description: 'Radio y TV Alternativa',
     url: 'https://alterna.ar',
     location: 'Miramar, Buenos Aires, Argentina'
@@ -62,7 +62,7 @@ const ALTERNA_CONFIG = {
         title: 'Alterna TV',
         description: 'Nuestro canal de televisión ofrece cobertura multimedia de la actualidad alternativa. Desde documentales hasta programas especiales, transmitimos en vivo contenidos comprometidos con la cultura, el arte y el análisis crítico de la realidad social.'
       },
-      mission: 'Alterna Medios es la convergencia de dos plataformas con un mismo objetivo: brindar una alternativa real a los medios convencionales. Creemos en el poder de la comunicación comunitaria, en la importancia de amplificar voces silenciadas y en la responsabilidad social de los medios.',
+      mission: 'Alternamedia es la convergencia de dos plataformas con un mismo objetivo: brindar una alternativa real a los medios convencionales. Creemos en el poder de la comunicación comunitaria, en la importancia de amplificar voces silenciadas y en la responsabilidad social de los medios.',
       values: 'Desde nuestra base en Miramar, Buenos Aires, trabajamos para ofrecer una programación de calidad que respete la inteligencia de nuestra audiencia y que se comprometa con la verdad y la justicia social.'
     }
   },
@@ -93,4 +93,3 @@ const ALTERNA_CONFIG = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = ALTERNA_CONFIG;
 }
-

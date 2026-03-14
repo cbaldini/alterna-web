@@ -26,6 +26,7 @@
   --radio-accent: #d20000;
   --tv-accent: #ff3b30;
   --transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --focus-ring: 0 0 0 3px rgba(255, 59, 48, 0.35);
 }
 
 /* Reset y estilos base */
@@ -147,7 +148,8 @@ body {
   font-family: 'Digital Dare', sans-serif;
 }
 
-.logo-alterna:hover {
+.logo-alterna:hover,
+.logo-alterna:focus-visible {
   filter: brightness(1.2);
 }
 
@@ -185,12 +187,25 @@ body {
   transition: width 300ms ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
   color: var(--text);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
   width: 100%;
+}
+
+.nav-link:focus-visible,
+.logo-alterna:focus-visible,
+.platform-card:focus-visible,
+.about-link:focus-visible,
+.cta-button:focus-visible,
+.social-link:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 10px;
 }
 
 /* ===== HERO SECTION ===== */
@@ -264,7 +279,7 @@ body {
 
 .platform-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 1.5rem;
   padding: 2rem;
@@ -298,8 +313,10 @@ body {
   transform: translateY(-4px);
 }
 
-.platform-card:hover::before {
-  opacity: 1;
+.platform-card:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
 }
 
 .platform-icon {
@@ -347,6 +364,7 @@ body {
   text-align: left;
   position: relative;
   z-index: 2;
+  min-width: 0;
 }
 
 .platform-name {
@@ -377,6 +395,7 @@ body {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .platform-arrow {
@@ -816,13 +835,22 @@ body {
 
 /* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    animation: none !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .platform-card:hover,
+  .platform-card:focus-visible {
+    transform: none;
   }
 }
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Alterna Medios - Local Server Setup
+# Alternamedia - Local Server Setup
 # Este script inicia un servidor local para probar el sitio
 
-echo "🚀 Iniciando servidor local para Alterna Medios..."
+echo "🚀 Iniciando servidor local para Alternamedia..."
 echo ""
 
 # Detectar si está instalado Python o Node
@@ -46,4 +46,3 @@ else
     echo "  - Node.js: https://nodejs.org"
     exit 1
 fi
-

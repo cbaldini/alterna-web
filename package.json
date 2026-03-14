@@ -1,14 +1,14 @@
 {
-  "name": "alterna-medios",
+  "name": "alternamedia",
   "version": "1.0.0",
   "description": "Portal multimedia para Alterna Radio y Alterna TV",
   "main": "index.html",
-  "author": "Alterna Medios",
+  "author": "Alternamedia",
   "license": "All rights reserved",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alterna/alterna-medios"
+    "url": "https://github.com/alterna/alternamedia"
   },
   "keywords": [
     "alterna",
@@ -42,4 +42,3 @@
     "node": ">=14.0.0"
   }
 }
-
